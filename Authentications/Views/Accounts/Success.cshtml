@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+}
+
+ 
+<div class="row mt-5 mb-5">
+    <div class="col-sm-8 rounded border border-2 p-5 mx-auto">
+        <h2>@ViewData["user"]</h2>
+        <div class="row mt-3">
+            <div class="col-sm-8">
+                <label class="text-uppercase text-secondary ">Login SuccessFull</label>
+            </div>
+            <div class="col-sm-4">
+                @Html.ActionLink("CLick To Home", "Get","Accounts", "", new { @class = "text-decoration-none btn btn-outline-secondary w-100" })
+            </div>
+        </div>
+    </div> 
+</div>

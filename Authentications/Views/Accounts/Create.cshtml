@@ -1,0 +1,108 @@
+﻿@model Authentications.Models.RegisterModel
+@{
+    ViewBag.Title = "Create";
+
+
+}
+<div class="row mt-4"  >
+    <div class="col-md-6 mx-auto rounded border p-4 ">
+        <h2 class="text-center text-primary text-decoration-underline text-uppercase">Register</h2>
+        @using (Html.BeginForm())
+        {
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Id)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Username)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Username, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Username, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Pwd)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Pwd, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Pwd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Cpwd)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Cpwd, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Cpwd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Age)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Age, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Age, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Gender)
+                </div>
+                <div class="col-sm-8 g-2">
+                    @Html.RadioButtonFor(e => e.Gender, "Male") Male
+                    @Html.RadioButtonFor(e => e.Gender, "Female") Female
+                    @Html.ValidationMessageFor(e => e.Gender, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Email)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4">
+                    @Html.LabelFor(e => e.Phone)
+                </div>
+                <div class="col-sm-8">
+                    @Html.EditorFor(e => e.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(e => e.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row  mb-3">
+                <div class="col-sm-4 d-grid">
+                    <input type="submit" value="Register" class="btn btn-primary w-100" />
+                </div>
+                <div class="col-sm-4">
+                    <input type="reset" value="Clear" class="btn btn-outline-danger w-100" />
+                </div>
+                <div class="col-sm-4">
+                    @Html.ActionLink("Back","Index","Home","",new {@class= "text-decoration-none btn btn-outline-secondary w-100" })
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-7">
+                  Already Have An Account ?
+                </div>
+                <div class="justify-content-center">
+                    @Html.ActionLink("Login Now", "LoginCheck","",new {@class="text-decoration-none text-primary"})
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
